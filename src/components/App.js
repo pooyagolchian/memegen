@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import MemeItem from './MemeItem';
 import {connect} from 'react-redux';
 import '../style.css';
+import MyMemes from './MyMemes';
+import MemeItem from './MemeItem';
 
 
 class App extends Component {
@@ -26,8 +27,14 @@ class App extends Component {
 
 
             <div className="App">
-                <h1>Meme Generator</h1>
-                <i>Write Some Text</i>
+                <h1 className='text-white'>Meme Generator</h1>
+                <div>
+                    <MyMemes />
+                </div>
+
+
+                <i className='text-white'>Write Some Text</i>
+
                 <div className='col col-12'>
                     <input
                         onChange={event => this.setState({text0: event.target.value})} type="text"

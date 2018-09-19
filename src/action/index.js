@@ -1,4 +1,5 @@
 export const RECEIVE_MEMES = 'RECEIVE_MEMES';
+export const  NEW_MEME = 'NEW_MEME';
 
 function receiveMemes(json) {
     const {memes} = json.data;
@@ -20,6 +21,11 @@ export function fetchMemes() {
     }
 }
 
-
+export function newMeme(meme) {
+    return {
+        type: NEW_MEME,
+        meme
+    }
+}
 
 

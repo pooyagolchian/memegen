@@ -10,8 +10,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
-store.subscribe(() => console.log('store', store.getState()));
-store.dispatch(fetchMemes());
+// store.subscribe(() => console.log('store', store.getState()));
+ store.dispatch(fetchMemes());
 
 
 ReactDOM.render(

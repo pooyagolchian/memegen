@@ -47,6 +47,7 @@ function postMemeJson(params) {
 
     return fetch('https://api.imgflip.com/caption_image', {
         method: 'POST',
+        mode:'cors',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },

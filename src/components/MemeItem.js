@@ -10,6 +10,9 @@ class MemeItem extends Component {
         this.state = {
             hovered: false,
         }
+        this.postMeme = this.postMeme.bind(this)
+        this.handleMouseEnter = this.handleMouseEnter.bind(this)
+        this.handleMouseLeave = this.handleMouseLeave.bind(this)
     }
 
 
@@ -24,14 +27,20 @@ class MemeItem extends Component {
         this.props.createMeme(memeObj);
     }
 
+    handleMouseEnter(){
+        this.setState({hovered: true})
+    }
+    handleMouseLeave(){
+        this.setState({hovered: false})
+    }
+
 
     render() {
         return (
             <div className='meme-item'
-                 onMouseEnter={() => this.setState({hovered: true})}
-                 onMouseLeave={() => this.setState({hovered: false})}
-                 onClick={() => this.postMeme()}
-
+                 onMouseEnter={this.handleMouseEnter}
+                 onMouseLeave={this.handleMouseLeave}
+                 onClick={this.postMeme}
             >
                 <img className={this.state.hovered ? 'meme-img darken-img' : 'meme-img'}
                      src={this.props.meme.url}

@@ -9,7 +9,7 @@ class MyMemes extends Component{
         return (
             <div>
                 {
-                    this.props.myMemes.map((meme, index )=> {
+                    this.props.myMemes.map((meme, index)=> {
                         return(
                             <img
                                 className='my-meme-img'

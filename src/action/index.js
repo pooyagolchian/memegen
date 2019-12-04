@@ -6,7 +6,7 @@ export const NEW_MEME = 'NEW_MEME';
 
 //Fetch data
 
-function receiveMemes(json) {
+const  receiveMemes = (json) => {
     const {memes} = json.data;
     return {
         type: RECEIVE_MEMES,
@@ -14,15 +14,17 @@ function receiveMemes(json) {
     }
 }
 
-function fetchMemesJson() {
+const fetchMemesJson = () => {
     return fetch('https://api.imgflip.com/get_memes')
         .then(response => response.json())
+        .catch(e=>console.error(e));
 }
 
-export function fetchMemes() {
-    return function (dispatch) {
+export const fetchMemes = () => {
+    return (dispatch) => {
         return fetchMemesJson()
             .then(json => dispatch(receiveMemes(json)))
+            .catch(e=>console.error(e));
     }
 }
 
@@ -30,14 +32,14 @@ export function fetchMemes() {
 
 //Post data
 
-export function newMeme(meme) {
+export const newMeme = (meme) => {
     return {
         type: NEW_MEME,
         meme
     }
 }
 
-function postMemeJson(params) {
+const postMemeJson = (params) => {
     params['username'] = username;
     params['password'] = password;
     const bodyParams = Object.keys(params).map(key => {
@@ -57,8 +59,8 @@ function postMemeJson(params) {
 }
 
 
-export function createMeme(new_meme_object) {
-    return function (dispatch) {
+export const createMeme = (new_meme_object) => {
+    return (dispatch) => {
         return postMemeJson(new_meme_object)
             .then(new_meme => dispatch(newMeme(new_meme)))
     }

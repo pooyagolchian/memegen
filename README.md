@@ -5,6 +5,6 @@
 * Use [ImageFlip Api](https://imgflip.com/)
 * Add Secret.js to this path ``` src/action/secret.js ```
 * Use CORS plugin to handle CORS header!
-* Watch [Demo](http://pooya-golchian.github.io/memegen)
+* Watch [Demo](http://pooyagolchian.github.io/memegen)
 
 

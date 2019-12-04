@@ -1,11 +1,8 @@
 import {username, password} from "./secret";
-
 export const RECEIVE_MEMES = 'RECEIVE_MEMES';
 export const NEW_MEME = 'NEW_MEME';
 
-
 //Fetch data
-
 const  receiveMemes = (json) => {
     const {memes} = json.data;
     return {
@@ -28,10 +25,6 @@ export const fetchMemes = () => {
     }
 }
 
-
-
-//Post data
-
 export const newMeme = (meme) => {
     return {
         type: NEW_MEME,
@@ -46,7 +39,6 @@ const postMemeJson = (params) => {
         return encodeURIComponent(key) + '=' + encodeURIComponent(params[key])
     }).join('&');
     // console.log('body params', bodyParams);
-
     return fetch('https://api.imgflip.com/caption_image', {
         method: 'POST',
         mode:'cors',
@@ -54,10 +46,11 @@ const postMemeJson = (params) => {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: bodyParams
-    }).then(response => response.json());
+    })
+    .then(response => response.json())
+    .catch(e => console.error(e));
 
 }
-
 
 export const createMeme = (new_meme_object) => {
     return (dispatch) => {

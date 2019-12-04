@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import MyMemes from './MyMemes';
 import MemeItem from './MemeItem';
 import Masonry from 'react-masonry-css';
-import InfiniteScroll from 'react-infinite-scroller';
 import '../style.css';
 
 
@@ -53,24 +52,27 @@ class App extends Component {
                         placeholder='Bottom Text'/>
                 </div>
 
-                <Masonry
-                breakpointCols={4}
-                className="my-masonry-grid"
-                columnClassName="my-masonry-grid_column">
-                  {
-                    this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
-                        return (
-                            <MemeItem
-                                key={index}
-                                meme={meme}
-                                text0={this.state.text0}
-                                text1={this.state.text1}
-                            />
-                        )
-                    })
-                }
-                </Masonry>
+              
                     
+
+                <Masonry
+                            breakpointCols={4}
+                            className="my-masonry-grid"
+                            columnClassName="my-masonry-grid_column">
+                            {
+                                this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
+                                    return (
+                                        <MemeItem
+                                            key={index}
+                                            meme={meme}
+                                            text0={this.state.text0}
+                                            text1={this.state.text1}
+                                        />
+                                    )
+                                })
+                            }
+                 </Masonry>
+
 
 
                 

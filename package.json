@@ -8,6 +8,7 @@
     "gh-pages": "^2.0.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
+    "react-infinite-scroll-component": "^5.0.4",
     "react-infinite-scroller": "^1.2.4",
     "react-masonry-css": "^1.0.14",
     "react-redux": "^5.0.7",

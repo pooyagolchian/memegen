@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import '../style.css';
 import MyMemes from './MyMemes';
 import MemeItem from './MemeItem';
+import Masonry from 'react-masonry-css';
+import InfiniteScroll from 'react-infinite-scroller';
+import '../style.css';
+
 
 
 class App extends Component {
@@ -50,7 +53,11 @@ class App extends Component {
                         placeholder='Bottom Text'/>
                 </div>
 
-                {
+                <Masonry
+                breakpointCols={4}
+                className="my-masonry-grid"
+                columnClassName="my-masonry-grid_column">
+                  {
                     this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
                         return (
                             <MemeItem
@@ -62,10 +69,21 @@ class App extends Component {
                         )
                     })
                 }
+                </Masonry>
+                    
+
+
+                
                 <div className='col col-12 col-sm-12 pt-5 pb-5'>
                     <button className='btn btn-primary col-12' onClick={this.loadMore}>Show more
                     </button>
                 </div>
+
+
+                
+
+
+
             </div>
         );
     }

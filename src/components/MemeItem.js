@@ -37,7 +37,8 @@ class MemeItem extends Component {
 
     render() {
         return (
-            <div className='meme-item'
+            
+                <div className='meme-item'
                  onMouseEnter={this.handleMouseEnter}
                  onMouseLeave={this.handleMouseLeave}
                  onClick={this.postMeme}

@@ -6313,36 +6313,30 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  background: #333; }
+  background-color: #e1e1e1; }
 
 .meme-item {
-  text-align: left;
-  display: inline-block;
   position: relative;
-  width: 150px;
-  height: 150px;
-  margin: 5px;
-  cursor: pointer; }
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; }
 
 .meme-img {
-  width: 150px;
-  height: 150px;
-  border: 3px solid white;
-  border-radius: 8px;
+  width: 100%;
+  height: auto;
   position: relative;
-  object-fit: cover;
   filter: brightness(90%); }
 
 .meme-text {
-  width: 150px;
-  text-align: center;
-  position: absolute;
-  border-radius: 5px;
-  bottom: 0;
   color: white;
-  font-size: 14px;
+  font-size: .8em;
   animation-name: fade_in;
-  animation-duration: 1s; }
+  animation-duration: 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .no-text {
   display: none; }
@@ -6367,8 +6361,25 @@ body {
 
 .my-meme-img {
   position: relative;
-  display: inline-block;
-  margin: 5px;
-  width: 220px;
-  border-radius: 4px;
-  border: 3px solid white; }
+  display: flex; }
+
+.my-masonry-grid {
+  display: -webkit-box;
+  /* Not needed if autoprefixing */
+  display: -ms-flexbox;
+  /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px;
+  /* gutter size offset */
+  width: auto; }
+
+.my-masonry-grid_column {
+  padding-left: 30px;
+  /* gutter size */
+  background-clip: padding-box; }
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  background: grey;
+  margin-bottom: 30px; }

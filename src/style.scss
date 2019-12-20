@@ -1,7 +1,7 @@
 @import '../node_modules/bootstrap//scss/bootstrap.scss';
 
 body {
-background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 .meme-item {
@@ -10,7 +10,7 @@ background-color: #f3f3f3;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  
+
 
 }
 
@@ -48,8 +48,9 @@ background-color: #f3f3f3;
   from {
     opacity: 0;
   }
+
   to {
-      opacity: 100;
+    opacity: 100;
   }
 
 }
@@ -59,9 +60,9 @@ background-color: #f3f3f3;
     filter: brightness(90%)
   }
 
-to {
-  filter: brightness(10%)
-}
+  to {
+    filter: brightness(10%)
+  }
 
 }
 
@@ -69,24 +70,61 @@ to {
 .my-meme-img {
   position: relative;
   display: flex;
-  
+
 }
 
 
 .my-masonry-grid {
-  display: -webkit-box; /* Not needed if autoprefixing */
-  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  margin-left: -30px; /* gutter size offset */
+  margin-left: -30px;
   width: auto;
 }
+
 .my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
+  padding-left: 30px;
   background-clip: padding-box;
 }
- 
-/* Style your items */
-.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+
+
+.my-masonry-grid_column>div {
   background: grey;
   margin-bottom: 30px;
+}
+
+
+.text-input-first {
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+  border-right: none;
+  border: 1px solid #666666;
+
+}
+
+.text-input-second {
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+  border-left: none;
+  border: 1px solid #666666;
+}
+
+
+
+
+
+
+
+.btn-load-more {
+  padding: 1em;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 1.4em;
+  border-radius: 5em;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+
+  
 }

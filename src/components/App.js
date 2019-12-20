@@ -15,6 +15,7 @@ class App extends Component {
             memeLimit: 10,
             text0: '',
             text1: '',
+            isShow: true
         };
         this.loadMore = this.loadMore.bind(this);
         this.handleChangeText0 = this.handleChangeText0.bind(this)
@@ -23,6 +24,9 @@ class App extends Component {
 
     loadMore() {
         this.setState({memeLimit: this.state.memeLimit + 10})
+        if(this.state.memeLimit.length) {
+            this.state.isShow = false;
+        }
     }
     handleChangeText0 (event) {
         this.setState({text0: event.target.value})
@@ -35,21 +39,34 @@ class App extends Component {
     }
 
     render() {
+        console.log(this.props.memes);
+    
         return (
-
+        
             <div className="App container">
-                <h1 className='text-white'>Meme Generator</h1>
+                <h1 className='font-weight-bolder col-12 text-center pt-5 '>Meme Generator</h1>
                 <div>
                     <MyMemes />
                 </div>
-                <i className='text-white'>Write Some Text</i>
-                <div className='col col-12'>
+                
+                <div className='pt-5 pb-5 col-12'>
+                    <div className='row'>
+                    <div className='col-12 pb-3'>
+                        <h3>How to generate meme</h3>
+                        <ul>
+                            <li>Write some text.</li>
+                            <li>Choose your image to generate meme</li>
+                        </ul>
+                    </div>
                     <input
+                        className="text-input-first col-6 p-2"
                         onChange={this.handleChangeText0} type="text"
                         placeholder='Top Text'/>
                     <input
+                        className="text-input-second col-6 p-2"
                         onChange={this.handleChangeText1} type="text"
                         placeholder='Bottom Text'/>
+                    </div>
                 </div>
 
               
@@ -72,18 +89,16 @@ class App extends Component {
                                 })
                             }
                  </Masonry>
-
-
-
-                
-                <div className='col col-12 col-sm-12 pt-5 pb-5'>
-                    <button className='btn btn-primary col-12' onClick={this.loadMore}>Show more
+                    
+                                
+                            
+                <div className='d-flex flex-row justify-content-center align-items-center pt-5 pb-5'>
+                    <button 
+                    className='col-6 m-auto btn-load-more' 
+                    onClick={this.loadMore}
+                    >Show more
                     </button>
                 </div>
-
-
-                
-
 
 
             </div>

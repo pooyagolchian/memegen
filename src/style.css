@@ -6365,21 +6365,37 @@ body {
 
 .my-masonry-grid {
   display: -webkit-box;
-  /* Not needed if autoprefixing */
   display: -ms-flexbox;
-  /* Not needed if autoprefixing */
   display: flex;
   margin-left: -30px;
-  /* gutter size offset */
   width: auto; }
 
 .my-masonry-grid_column {
   padding-left: 30px;
-  /* gutter size */
   background-clip: padding-box; }
 
-/* Style your items */
 .my-masonry-grid_column > div {
-  /* change div to reference your elements you put in <Masonry> */
   background: grey;
   margin-bottom: 30px; }
+
+.text-input-first {
+  border-top-left-radius: 5em;
+  border-bottom-left-radius: 5em;
+  border-right: none;
+  border: 1px solid #666666; }
+
+.text-input-second {
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
+  border-left: none;
+  border: 1px solid #666666; }
+
+.btn-load-more {
+  padding: 1em;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 1.4em;
+  border-radius: 5em; }
+  .btn-load-more:hover {
+    background-color: black;
+    color: white; }

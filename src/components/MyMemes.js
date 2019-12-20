@@ -1,34 +1,34 @@
 import React, {Component} from 'react';
-import  {connect} from 'react-redux';
+import {connect} from 'react-redux';
+import Masonry from 'react-masonry-css';
 
-
-
-class MyMemes extends Component{
+class MyMemes extends Component {
 
     render() {
         return (
-            <div>
-                {
-                    this.props.myMemes.map((meme, index)=> {
-                        return(
-                            <img
-                                className='my-meme-img'
-                                key={index}
-                                src={meme.data.url}
-                                alt="my-meme"/>
-                        )
+            <Masonry
+                breakpointCols={4}
+                className="my-masonry-grid pt-5"
+                columnClassName="my-masonry-grid_column">
+                {this
+                    .props
+                    .myMemes
+                    .map((meme, index) => {
+                        return (<img
+                            className='my-meme-img img-fluid mb-3'
+                            key={index}
+                            src={meme && meme.data && meme.data.url}
+                            alt="my-meme"/>)
                     })
-                }
-            </div>
+}
+            </Masonry>
         )
     }
 
 }
 
 function mapStateToProps(state) {
-    return {
-        myMemes: state.myMemes
-    }
+    return {myMemes: state.myMemes}
 }
 
 export default connect(mapStateToProps, null)(MyMemes);

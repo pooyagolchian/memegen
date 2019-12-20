@@ -6312,6 +6312,9 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+*:focus {
+  outline: 0 !important; }
+
 body {
   background-color: #f3f3f3; }
 
@@ -6394,7 +6397,7 @@ body {
   padding: 1em;
   border: 2px solid black;
   background-color: white;
-  font-size: 1.4em;
+  font-size: 1em;
   border-radius: 5em; }
   .btn-load-more:hover {
     background-color: black;

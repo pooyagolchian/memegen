@@ -44,7 +44,7 @@ class App extends Component {
         if(this.state.memeLimit < 99) {
             loadMoreBtn = <div
                     className='d-flex flex-row justify-content-center align-items-center pt-5 pb-5'>
-                    <button className='col-3 m-auto btn-load-more' onClick={this.loadMore}>Show more
+                    <button className='col-3 m-auto btn-load-more shadow-sm' onClick={this.loadMore}>Show more
                     </button>
                 </div>
         } else {
@@ -54,30 +54,34 @@ class App extends Component {
 
         return (
             <div className="App container">
-                <h1 className='font-weight-bolder col-12 text-center pt-5 text-white'>Meme Generator</h1>
+                <h1 className='font-weight-bolder col-12 text-center pt-5 text-black second-fonts font-4'>Meme Generator</h1>
                 <div>
                     <MyMemes/>
                 </div>
 
-                <div className='pt-5 pb-5 col-12'>
+                <div className='pt-5 pb-5 col-12 p-0'>
                     <div className='row'>
-                        <div className='col-12 pb-3 pb-5'>
-                            <h3 className='text-white'>How to generate meme</h3>
-                            <ul className='text-white'>
+                        <div className='col-12 pb-3 pb-5 p-0'>
+                            <h3 className='text-black second-fonts'>How to generate meme</h3>
+                            <ul className='text-black'>
                                 <li>Write some text.</li>
                                 <li>Choose the image to generate meme.</li>
                             </ul>
                         </div>
+                        <div className='col-6'>
                         <input
-                            className="text-input-first col-6 p-2"
+                            className="text-input-first col-12 p-2 shadow-sm"
                             onChange={this.handleChangeText0}
                             type="text"
                             placeholder='Top Text'/>
+                        </div>
+                        <div className='col-6'>
                         <input
-                            className="text-input-second col-6 p-2"
+                            className="text-input-second col-12 p-2 shadow-sm"
                             onChange={this.handleChangeText1}
                             type="text"
                             placeholder='Bottom Text'/>
+                        </div>
                     </div>
                 </div>
                 <Masonry

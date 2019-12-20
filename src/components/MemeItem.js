@@ -21,7 +21,8 @@ class MemeItem extends Component {
     }
 
     postMeme() {
-        console.log('this.props', this.props);
+        console.log(this.props);
+        
         const {text0, text1} = this.props;
         const memeObj = {
             template_id: this.props.meme.id,
@@ -31,6 +32,7 @@ class MemeItem extends Component {
         this
             .props
             .createMeme(memeObj);
+            
     }
 
     handleMouseEnter() {

@@ -1,11 +1,43 @@
 @import '../node_modules/bootstrap//scss/bootstrap.scss';
 
+@for $i from 1 through 15 {
+  .font-#{$i} {
+    font-size: $i + em !important;
+    //line-height: $i/$i + em !important;
+    word-spacing: -0.01 + em !important;
+  }
+}
+
+@for $i from 1 through 15 {
+  .font-medium-#{$i} {
+    font-size: $i + 0.5 + em !important;
+    //line-height: $i/$i + em !important;
+    word-spacing: -0.01 + em !important;
+  }
+}
+
+@for $i from 70 through 100 {
+  .font-per-#{$i} {
+    font-size: percentage($i/100) !important;
+  }
+}
+
+
 *:focus {
   outline: 0 !important;
 }
 
 body {
-  background-color: #222222;
+  background-color:#f1f1f1;
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 1.1em;
+}
+
+.first-fonts{
+  font-family: 'Tomorrow', sans-serif;
+}
+.second-fonts {
+  font-family: 'Lakki Reddy', cursive;
 }
 
 .meme-item {
@@ -93,39 +125,44 @@ body {
 
 
 .my-masonry-grid_column>div {
-  background: grey;
+  background: transparent;
   margin-bottom: 30px;
 }
 
 
 .text-input-first {
-  border-top-left-radius: 5em;
-  border-bottom-left-radius: 5em;
   border-right: none;
-  border: 1px solid #666666;
+  border: 1px solid #dddddd;
 
 }
 
 .text-input-second {
-  border-top-right-radius: 5em;
-  border-bottom-right-radius: 5em;
   border-left: none;
-  border: 1px solid #666666;
+  border: 1px solid #dddddd;
 }
 
 
 .btn-load-more {
   padding: 1em;
-  border: 2px solid black;
+  border: 2px solid #dddddd;
   background-color: white;
   font-size: 1em;
-  border-radius: 5em;
 
   &:hover {
-    background: rgb(131,58,180);
-    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 95%, rgba(252,176,69,1) 100%);
+    background-color: black;
+    border: 2px solid #000000;
     color: white;
   }
 
 
+}
+
+
+
+.link {
+  color: #666666;
+  &:hover {
+    color: #000000;
+    text-decoration: none;
+  }
 }

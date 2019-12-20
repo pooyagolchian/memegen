@@ -14,11 +14,43 @@ class MyMemes extends Component {
                     .props
                     .myMemes
                     .map((meme, index) => {
-                        return (<img
-                            className='my-meme-img img-fluid mb-3'
-                            key={index}
-                            src={meme && meme.data && meme.data.url}
-                            alt="my-meme"/>)
+                        return (
+
+                            <div key={index}>
+                                <div>
+                                    <img
+                                        className='my-meme-img img-fluid'
+                                        src={meme.data.url}
+                                        alt="my-meme"/>
+
+                                </div>
+                                <div className='col-12 p-0'>
+                                    <a
+                                        target="_blank"
+                                        className='font-per-70 pr-2 link'
+                                        download
+                                        
+                                        href={meme.data.url}>
+                                        Download
+                                    </a>
+                                    <a
+                                        
+                                        target='_blank'
+                                        className="twitter-share-button font-per-70 link"
+                                        href={
+                                            'https://twitter.com/intent/tweet?text='+ 
+                                            ' Meme Generator - You can visit imgflip to share this meme ' +
+                                            meme.data.page_url + ' or download from this link ' +
+                                            meme.data.url +
+                                            '____MEME GENERATOR - https://pooyagolchian.ir/memegen/'
+                                            }
+                                        data-size="large">
+                                        Tweet
+                                    </a>
+                                </div>
+                            </div>
+
+                        )
                     })
 }
             </Masonry>

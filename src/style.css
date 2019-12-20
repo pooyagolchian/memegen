@@ -6312,11 +6312,232 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.font-1 {
+  font-size: 1em !important;
+  word-spacing: -0.01em !important; }
+
+.font-2 {
+  font-size: 2em !important;
+  word-spacing: -0.01em !important; }
+
+.font-3 {
+  font-size: 3em !important;
+  word-spacing: -0.01em !important; }
+
+.font-4 {
+  font-size: 4em !important;
+  word-spacing: -0.01em !important; }
+
+.font-5 {
+  font-size: 5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-6 {
+  font-size: 6em !important;
+  word-spacing: -0.01em !important; }
+
+.font-7 {
+  font-size: 7em !important;
+  word-spacing: -0.01em !important; }
+
+.font-8 {
+  font-size: 8em !important;
+  word-spacing: -0.01em !important; }
+
+.font-9 {
+  font-size: 9em !important;
+  word-spacing: -0.01em !important; }
+
+.font-10 {
+  font-size: 10em !important;
+  word-spacing: -0.01em !important; }
+
+.font-11 {
+  font-size: 11em !important;
+  word-spacing: -0.01em !important; }
+
+.font-12 {
+  font-size: 12em !important;
+  word-spacing: -0.01em !important; }
+
+.font-13 {
+  font-size: 13em !important;
+  word-spacing: -0.01em !important; }
+
+.font-14 {
+  font-size: 14em !important;
+  word-spacing: -0.01em !important; }
+
+.font-15 {
+  font-size: 15em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-1 {
+  font-size: 1.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-2 {
+  font-size: 2.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-3 {
+  font-size: 3.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-4 {
+  font-size: 4.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-5 {
+  font-size: 5.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-6 {
+  font-size: 6.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-7 {
+  font-size: 7.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-8 {
+  font-size: 8.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-9 {
+  font-size: 9.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-10 {
+  font-size: 10.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-11 {
+  font-size: 11.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-12 {
+  font-size: 12.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-13 {
+  font-size: 13.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-14 {
+  font-size: 14.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-medium-15 {
+  font-size: 15.5em !important;
+  word-spacing: -0.01em !important; }
+
+.font-per-70 {
+  font-size: 70% !important; }
+
+.font-per-71 {
+  font-size: 71% !important; }
+
+.font-per-72 {
+  font-size: 72% !important; }
+
+.font-per-73 {
+  font-size: 73% !important; }
+
+.font-per-74 {
+  font-size: 74% !important; }
+
+.font-per-75 {
+  font-size: 75% !important; }
+
+.font-per-76 {
+  font-size: 76% !important; }
+
+.font-per-77 {
+  font-size: 77% !important; }
+
+.font-per-78 {
+  font-size: 78% !important; }
+
+.font-per-79 {
+  font-size: 79% !important; }
+
+.font-per-80 {
+  font-size: 80% !important; }
+
+.font-per-81 {
+  font-size: 81% !important; }
+
+.font-per-82 {
+  font-size: 82% !important; }
+
+.font-per-83 {
+  font-size: 83% !important; }
+
+.font-per-84 {
+  font-size: 84% !important; }
+
+.font-per-85 {
+  font-size: 85% !important; }
+
+.font-per-86 {
+  font-size: 86% !important; }
+
+.font-per-87 {
+  font-size: 87% !important; }
+
+.font-per-88 {
+  font-size: 88% !important; }
+
+.font-per-89 {
+  font-size: 89% !important; }
+
+.font-per-90 {
+  font-size: 90% !important; }
+
+.font-per-91 {
+  font-size: 91% !important; }
+
+.font-per-92 {
+  font-size: 92% !important; }
+
+.font-per-93 {
+  font-size: 93% !important; }
+
+.font-per-94 {
+  font-size: 94% !important; }
+
+.font-per-95 {
+  font-size: 95% !important; }
+
+.font-per-96 {
+  font-size: 96% !important; }
+
+.font-per-97 {
+  font-size: 97% !important; }
+
+.font-per-98 {
+  font-size: 98% !important; }
+
+.font-per-99 {
+  font-size: 99% !important; }
+
+.font-per-100 {
+  font-size: 100% !important; }
+
 *:focus {
   outline: 0 !important; }
 
 body {
-  background-color: #222222; }
+  background-color: #f1f1f1;
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 1.1em; }
+
+.first-fonts {
+  font-family: 'Tomorrow', sans-serif; }
+
+.second-fonts {
+  font-family: 'Lakki Reddy', cursive; }
 
 .meme-item {
   position: relative;
@@ -6378,28 +6599,29 @@ body {
   background-clip: padding-box; }
 
 .my-masonry-grid_column > div {
-  background: grey;
+  background: transparent;
   margin-bottom: 30px; }
 
 .text-input-first {
-  border-top-left-radius: 5em;
-  border-bottom-left-radius: 5em;
   border-right: none;
-  border: 1px solid #666666; }
+  border: 1px solid #dddddd; }
 
 .text-input-second {
-  border-top-right-radius: 5em;
-  border-bottom-right-radius: 5em;
   border-left: none;
-  border: 1px solid #666666; }
+  border: 1px solid #dddddd; }
 
 .btn-load-more {
   padding: 1em;
-  border: 2px solid black;
+  border: 2px solid #dddddd;
   background-color: white;
-  font-size: 1em;
-  border-radius: 5em; }
+  font-size: 1em; }
   .btn-load-more:hover {
-    background: #833ab4;
-    background: linear-gradient(180deg, #833ab4 0%, #fd1d1d 95%, #fcb045 100%);
+    background-color: black;
+    border: 2px solid #000000;
     color: white; }
+
+.link {
+  color: #666666; }
+  .link:hover {
+    color: #000000;
+    text-decoration: none; }

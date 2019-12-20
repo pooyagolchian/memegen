@@ -15,7 +15,6 @@ class App extends Component {
             memeLimit: 10,
             text0: '',
             text1: '',
-            isShow: true
         };
         this.loadMore = this.loadMore.bind(this);
         this.handleChangeText0 = this.handleChangeText0.bind(this)
@@ -24,9 +23,6 @@ class App extends Component {
 
     loadMore() {
         this.setState({memeLimit: this.state.memeLimit + 10})
-        if(this.state.memeLimit.length) {
-            this.state.isShow = false;
-        }
     }
     handleChangeText0 (event) {
         this.setState({text0: event.target.value})
@@ -39,7 +35,6 @@ class App extends Component {
     }
 
     render() {
-        console.log(this.props.memes);
     
         return (
         
@@ -68,10 +63,6 @@ class App extends Component {
                         placeholder='Bottom Text'/>
                     </div>
                 </div>
-
-              
-                    
-
                 <Masonry
                             breakpointCols={4}
                             className="my-masonry-grid"
@@ -89,9 +80,7 @@ class App extends Component {
                                 })
                             }
                  </Masonry>
-                    
-                                
-                            
+                 
                 <div className='d-flex flex-row justify-content-center align-items-center pt-5 pb-5'>
                     <button 
                     className='col-6 m-auto btn-load-more' 

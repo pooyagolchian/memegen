@@ -54,7 +54,7 @@ class App extends Component {
 
         return (
             <div className="App container">
-                <h1 className='font-weight-bolder col-12 text-center pt-5 '>Meme Generator</h1>
+                <h1 className='font-weight-bolder col-12 text-center pt-5 text-white'>Meme Generator</h1>
                 <div>
                     <MyMemes/>
                 </div>
@@ -62,10 +62,10 @@ class App extends Component {
                 <div className='pt-5 pb-5 col-12'>
                     <div className='row'>
                         <div className='col-12 pb-3 pb-5'>
-                            <h3>How to generate meme</h3>
-                            <ul>
+                            <h3 className='text-white'>How to generate meme</h3>
+                            <ul className='text-white'>
                                 <li>Write some text.</li>
-                                <li>Choose your image to generate meme</li>
+                                <li>Choose the image to generate meme.</li>
                             </ul>
                         </div>
                         <input

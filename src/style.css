@@ -6316,7 +6316,7 @@ a.text-dark:hover, a.text-dark:focus {
   outline: 0 !important; }
 
 body {
-  background-color: #f3f3f3; }
+  background-color: #222222; }
 
 .meme-item {
   position: relative;
@@ -6400,5 +6400,6 @@ body {
   font-size: 1em;
   border-radius: 5em; }
   .btn-load-more:hover {
-    background-color: black;
+    background: #833ab4;
+    background: linear-gradient(180deg, #833ab4 0%, #fd1d1d 95%, #fcb045 100%);
     color: white; }
